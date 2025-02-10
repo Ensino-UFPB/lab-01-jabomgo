@@ -1,1 +1,112 @@
 Coloque aqui todas as respostas das práticas indicadas no README.md
+
+Questão 1
+
+1.1
+172.18.0.1 e 255.255.0.0
+
+1.2
+172.18.0.0
+
+1.3
+2 rotas
+
+Questão 2
+
+2.1
+172.18.0.2
+
+2.2
+172.18.0.2/16
+
+2.3
+eth0@if8
+
+
+Questão 3
+
+root@198f785b4cad:/# nslookup 
+> www.google.com
+Server:         127.0.0.11
+Address:        127.0.0.11#53
+
+Non-authoritative answer:
+Name:   www.google.com
+Address: 142.251.128.196
+Name:   www.google.com
+Address: 2800:3f0:4001:840::2004
+> www.whitehouse.gov
+Server:         127.0.0.11
+Address:        127.0.0.11#53
+
+Non-authoritative answer:
+www.whitehouse.gov      canonical name = wh47.go-vip.net.
+Name:   wh47.go-vip.net
+Address: 192.0.66.51
+Name:   wh47.go-vip.net
+Address: 2a04:fa87:fffd::c000:4233
+> www.rnp.br
+Server:         127.0.0.11
+Address:        127.0.0.11#53
+
+Non-authoritative answer:
+Name:   www.rnp.br
+Address: 104.18.27.22
+Name:   www.rnp.br
+Address: 104.18.26.22
+Name:   www.rnp.br
+Address: 2606:4700::6812:1a16
+Name:   www.rnp.br
+Address: 2606:4700::6812:1b16
+> www.ufpb.br
+Server:         127.0.0.11
+Address:        127.0.0.11#53
+
+Non-authoritative answer:
+www.ufpb.br     canonical name = nginx.bbn.ufpb.br.
+Name:   nginx.bbn.ufpb.br
+Address: 150.165.254.52
+
+Questão 4
+
+4.1
+O tempo de resposta é ~0.100 ms para 127.0.0.1
+O tempo de restoa é 0.145 para 172.18.0.1
+
+4.2
+ufpb.br -> ~200ms
+yahoo.com -> ~250ms
+brasil.gov.br -> ~300ms
+dce.ufpb.br -> unkown host
+
+Sim, o site www.dce.ufpb.br, apareceu que a seguinte mensagem: "ping: unknown host"
+
+4.3
+google.com -> 100ms
+rnp.br -> 178ms
+whitehouse.gov -> 268ms
+
+Distancia dos entre quem solicitou o ping, numeros de saltos, localidade do destino, instabilidade da rede, etc...
+
+Questão 5
+
+5.1
+Algum roteadores são explicitamente configurados para não responder o protocolo ICMP, não necessariamente é um problema de rede, pode ser questão de segurança do roteador que o pacote atingiu de não responder o protocolo
+
+Questão 6
+
+6.1
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.11:43611        0.0.0.0:*               LISTEN      -                   
+udp        0      0 127.0.0.11:53796        0.0.0.0:*                           -  
+
+6.2
+São parecidos, ambos possuem: Destination, gateway, genmask, flags e Iface. No netstat -r, tem os campos MSS, Window, irtt que são diferentes do route.
+
+Questão 7
+
+7.1
+A conexão foi estabelecida, mas como eu não mandei uma 'pergunta' que ele entenda, me enviou o código 400 de badresquest
+
+7.2
+Não consegui me conectar, recebi que a consulta DNS falhou, ou seja, não foi encontrado o www.dce.ufpb.br
