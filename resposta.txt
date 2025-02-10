@@ -109,4 +109,12 @@ Questão 7
 A conexão foi estabelecida, mas como eu não mandei uma 'pergunta' que ele entenda, me enviou o código 400 de badresquest
 
 7.2
-Não consegui me conectar, recebi que a consulta DNS falhou, ou seja, não foi encontrado o www.dce.ufpb.br
+Não consegui me conectar, recebi que a consulta DNS falhou, ou seja, não foi encontrado o ip do site www.dce.ufpb.br
+
+Questão 8
+
+8.2
+Pode ser útil para identificar problemas em algum nó da rede, a ferramenta mostra todos os saltos que ocorreram do pacote, e fica enviando outros pings mostrando e comparando informações como latencia media de resposta de cada nó e perda de pacotes
+
+8.4
+Os dados que são gerados permite um monitoramento constante dos saltos, permitindo verificar se está ocorrendo a conexão e rota da forma esperada, além disso, permite verificar se algum nó está com um tempo de resposta muito alto e pacotes perdidos, caso tenha anomalidades pode ser que seja feitas novas investigação para descobrir os motivos que estão causando isso
